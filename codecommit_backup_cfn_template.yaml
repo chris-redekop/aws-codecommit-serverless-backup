@@ -73,7 +73,7 @@ Resources:
   CodeCommitBackupLambda:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: CodeCommitBackupLambda
+      FunctionName: codecommit-backups
       Handler: codecommit_backup_trigger_lambda.handler
       Runtime: python3.6
       MemorySize: 128
@@ -166,7 +166,7 @@ Resources:
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
-      Name: CodeCommitBackup
+      Name: codecommit-backups
       Description: CodeBuild will backup all CodeCommit repo in this region
       ServiceRole: !GetAtt CodeBuildProjectRole.Arn
       Artifacts:
